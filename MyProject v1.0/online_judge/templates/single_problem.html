@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <br>
+        <p align="center"> <font size = "5">  {{ problem.title }}  </font> </p>
+        <p align="center"> <font size = "3.5">  Time Limit : {{ problem.time_limit }} s  </font></p>
+        <p align="center"> <font size = "3.5"> Memory Limit : {{ problem.memory_limit }} MB   </font></p>
+        <p> <font size = "4"> {{ problem.description | safe | linebreaks }} </font> </p>
+        <br>
+        <hr>
+        <div>
+            <form method="post" enctype="multipart/form-data">
+               {% csrf_token %}
+               {{form.as_p}}
+               <button type="submit">submit</button>
+            </form>
+        </div>
+        <hr>
+
+{% endblock %}

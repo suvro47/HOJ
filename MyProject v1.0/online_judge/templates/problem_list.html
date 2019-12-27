@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+      <h2 align="center"> Let's solve the problems </h2>
+      <ul>
+          <hr>
+          {% for problem in all_problem_list %}
+            <p> Problem {{problem.pk}} : <a href="{% url 'single-problem' problem.pk %}">{{ problem.title }}</a>  | Tags: {{problem.tags}}  | Difficulty : {{problem.difficulty}} | Added by : {{problem.author}} | Tester : {{problem.tester}}</p>
+          <hr>
+          {% endfor %}
+      </ul>
+{% endblock %}
