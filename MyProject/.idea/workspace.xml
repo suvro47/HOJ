@@ -24,18 +24,18 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/online_judge/problems" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SUVRO\Desktop\MyProject\online_judge\problems" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\SUVRO\Desktop\MyProject\online_judge\templates" />
       <recent name="C:\Users\SUVRO\Desktop\MyProject\online_judge\templates\registration" />
       <recent name="C:\Users\SUVRO\Desktop\Django\online_judge\templates" />
       <recent name="C:\Users\SUVRO\Desktop\Django\online_judge\static" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\SUVRO\Desktop\MyProject\online_judge\problems" />
     </key>
   </component>
   <component name="RunDashboard">

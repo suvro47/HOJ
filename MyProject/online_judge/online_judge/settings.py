@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'accounts',
     'problems',
     'ckeditor',
-    'submissions',
 ]
 
 MIDDLEWARE = [
