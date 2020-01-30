@@ -39,7 +39,7 @@
     <div class="card-body">
         <form method = 'POST' enctype="multipart/form-data">
     {% csrf_token %}
-    {{form.as_p}}
+            <p1 style=" font-family : 'Times New Roman'; "> {{form.as_p}} </p1>
     {% if user.is_authenticated %}
         <button type = 'submit' class="btn btn-primary">Submit Code</button>
     {% else %}

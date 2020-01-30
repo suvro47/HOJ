@@ -1,5 +1,8 @@
-from django.shortcuts import render
-from problem.models import Problem
+from django.shortcuts import render, redirect
+
+from .models import Problem
+from submission.models import Submission
+from .forms import SubmitForm
 
 
 #To view all problems
@@ -8,9 +11,10 @@ def problem_list(request):
     context = {'problems': problems}
     return render(request, 'problems.html', context)
 
-def single_problem( request , pid ):
-    problem = Problem.objects.get(pk=pid)
-    return render(request, 'problem.html', {'problem': problem})
 
-
-
+def single_problem(request, pid):
+    form = SubmitForm()
+    problem = Problem.objects.get(id=pid)
+    request.session['pid'] = pid
+    context = {'problem': problem, 'form': form}
+    return render(request, 'problem.html', context)
