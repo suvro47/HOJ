@@ -35,5 +35,5 @@ class Submission(models.Model):
     code = models.FileField(upload_to=path_to_save)
 
     def __str__(self):
-        return str(self.id)
+        return str(self.pk)
 

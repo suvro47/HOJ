@@ -30,6 +30,5 @@ urlpatterns = [
     re_path(r'^ckeditor/', include('ckeditor_uploader.urls')),
     path('problems/', prob_views.problem_list, name='problems'),
     path('problem/<pid>/', prob_views.single_problem, name='problem'),
-
-
+    path('submission/', prob_views.submit_code, name='submission'),
 ]
