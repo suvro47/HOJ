@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path, include
 from user import views as user_views
+from problem import views as prob_views
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
@@ -27,6 +28,8 @@ urlpatterns = [
     path('profile/', user_views.profile, name='profile'),
     path('profiles/', user_views.profiles, name='profiles'),
     re_path(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    path('problems/', prob_views.problem_list, name='problems'),
+    path('problem/<pid>/', prob_views.single_problem, name='problem'),
 
 
 ]
