@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>User List</title>
+{% endblock %}
+{% block content %}
+<style>
+    body {
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        background-color: #fdfdfd;
+    }
+    
+    .head_text {
+        color: white;
+    }
+    
+    .card {
+        box-shadow: 0 0px 0px #E3E7EB;
+        height : 425px;
+        width : 500px;
+    }
+</style>
+
+<div class="container">
+  <div class="row">
+
+
+<!-- Sidebar Widgets Column -->
+</div>
+</div>
+<div class="col-md-8 left top ">
+<div class="card my-4">
+        <h5 class="card-header" align="center"> User List </h5>
+    <div class="card-body">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Username</th>
+      <th scope="col">Institute</th>
+      <th scope="col">Country</th>
+      <th scope="col">Solved</th>
+    </tr>
+  </thead>
+    {% for user in all_user %}
+  <tbody>
+    <tr>
+      <th scope="row">{{user.id}}</th>
+      <td>{{user.username}}</td>
+      <td>{{user.institute}}</td>
+      <td>{{user.country}}</td>
+      <td>{{user.problem_solved}}</td>
+
+    </tr>
+  </tbody>
+    {% endfor %}
+</table>
+    </div>
+</div>
+</div>
+{% endblock %}

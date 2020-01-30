@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>{{user.username}}'s Profile</title>
+{% endblock %}
+{% block content %}
+<style>
+    body {
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        background-color: #fdfdfd;
+    }
+    
+    .head_text {
+        color: white;
+    }
+    
+    .card {
+        box-shadow: 0 0px 0px #E3E7EB;
+        height : 300px;
+        width : 500px;
+    }
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 card mb-4  mt-4 left  top">
+      <h5 class="card-header" align="center"> <i> Image </i></h5>
+      <div class="card-body">
+       </div>
+    </div>
+<div class="col-md-4 float-right ">
+   <div class="card my-4">
+     <h5 class="card-header" align="center"> <i> {{user.username}}'s details </i></h5>
+    <div class="card-body">
+      <p1 style=" font-family : 'Times New Roman'; "> User ID:  {{user.id}} </p1> <br>
+      <p1 style=" font-family : 'Times New Roman'; "> Full Name:  {{user.full_name}} </p1> <br>
+      <p1 style=" font-family : 'Times New Roman'; "> User Name:  {{user.username}} </p1> <br>
+      <p1 style=" font-family : 'Times New Roman'; "> Problem Tried:  {{user.problem_tried}} </p1> <br>
+      <p1 style=" font-family : 'Times New Roman'; "> Problem Solved:  {{user.problem_solved}} </p1> <br>
+      <p1 style=" font-family : 'Times New Roman'; "> Email:  {{user.email}} </p1> <br>
+      <p1 style=" font-family : 'Times New Roman'; "> Institute:  {{user.institute}} </p1> <br>
+      <p1 style=" font-family : 'Times New Roman'; "> Country:  {{user.country}} </p1> <br>
+      <p1 style=" font-family : 'Times New Roman'; "> Join Date:  {{user.date_joined}} </p1> <br>
+      <p1 style=" font-family : 'Times New Roman'; "> Last Login Time:  {{user.last_login}} </p1> <br>
+    </div>
+   </div>
+</div>
+
+</div>
+</div>
+</div>
+{% endblock %}
+
+
+
