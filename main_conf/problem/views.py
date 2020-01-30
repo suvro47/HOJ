@@ -12,3 +12,5 @@ def single_problem( request , pid ):
     problem = Problem.objects.get(pk=pid)
     return render(request, 'problem.html', {'problem': problem})
 
+
+
