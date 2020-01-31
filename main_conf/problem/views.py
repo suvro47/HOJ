@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from problem.models import Problem
 from submission.models import Submission
 from .forms import SubmitForm
-from judge_dir.judge import judging
+from Judge_dir.judge import judging
 
 
 #To view all problems
