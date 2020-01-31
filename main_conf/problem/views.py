@@ -19,11 +19,13 @@ def single_problem(request, pid):
             code = form.save(commit=False)  # variable name need to change
             code.user_id = request.user
             problem = Problem.objects.get(id=pid)
+            #user = request.user
             problem.no_of_submissions += 1
             code.problem_id = problem
             code.save()  # save the model before judging with default values
             time = problem.time_limit
-            code.verdict, code.time = judging(problem.input_file.path, problem.output_file.path, code.code.path, code.language, time, problem.memory_limit)
+            code.verdict, code.time = judging(problem.input_file.path, problem.output_file.path, code.code.path,
+                                              code.language, time, problem.memory_limit)
             if code.verdict == 1:
                 problem.no_of_accepted += 1
             # final save after judging
