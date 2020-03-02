@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Basic Concept</title>
+{% endblock %}
+{% block content %}
+
+<style>
+    .card {
+        box-shadow: 0 0px 0px #E3E7EB;
+    }
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 card mb-8  mt-4 left  top">
+      <h5 class="card-header"> <i> <a href="{% url 'basic' %}"> ○ প্রোগ্রামিংয়ে হাতেখড়ি  </a></i> </h5>
+    </div>
+
+    <div class="col-md-10 card mb-8  mt-4 left  top">
+      <h5 class="card-header"> <i> <a href="{% url 'pro_lang' %}">  ○ প্রোগ্রামিং ল্যাংগুয়েজ </a> </i></h5>
+    </div>
+
+    <div class="col-md-10 card mb-8  mt-4 left  top">
+      <h5 class="card-header"> <i> <a href="{% url 'sort_search' %}">○ সর্টিং - সার্চিং </a> </i></h5>
+    </div>
+
+     <div class="col-md-10 card mb-8  mt-4 left  top">
+       <h5 class="card-header"> <a href="{% url 'ds' %}"> <i> ○ ডাটা স্ট্রাকচার </i></a> </h5></h5>
+    </div>
+
+    <div class="col-md-10 card mb-8  mt-4 left  top">
+      <h5 class="card-header"> <a href="{% url 'mnt' %}"> <i> ○ ম্যাথ ও নাম্বার থিওরী </i> </a> </h5>
+    </div>
+
+    <div class="col-md-10 card mb-8  mt-4 left  top">
+      <h5 class="card-header"> <a href="{% url 'graph_theory' %}"> <i>  ○ গ্রাফ থিওরী </i> </a> </h5>
+    </div>
+
+     <div class="col-md-10 card mb-8  mt-4 left  top">
+       <h5 class="card-header"> <a href="{% url 'recursion' %}"> <i> ○ রিকার্শন, ব্যাকট্র্যাকিং </i> </a> </h5>
+    </div>
+
+      <div class="col-md-10 card mb-8  mt-4 left  top">
+        <h5 class="card-header"> <a href="{% url 'DP' %}"> <i> ○ ডাইনামিক প্রোগ্রামিং </i> </a> </h5>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

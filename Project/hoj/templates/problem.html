@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>{{problem.title}} | Battle Of Brain</title>
+{% endblock %}
+{% block content %}
+<style>
+    .card {
+        box-shadow: 0 0px 0px #E3E7EB;
+    }
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-4 left top">
+      <div class="card-body">
+
+          <div align="center">
+          <p1 style=" font-family : 'Times New Roman', font-size : 40px ;"> <b> {{problem.title}} </b></p1> <br>
+          <pre>Time Limit:{{problem.time_limit.0}}s Memory Limit:{{problem.memory_limit}}MB</pre> <br>
+          </div>
+          <p1 style=" font-family : 'Times New Roman'; "> {{problem.description | safe}} </p1>
+
+          <p1 style=" font-family : 'Times New Roman'; "> <b> Sample Input : </b> {{problem.sample_input | safe }} </p1>
+          <p1 style=" font-family : 'Times New Roman'; "> <b> Sample Output : </b> {{problem.sample_output | safe }} </p1>
+<!-- Sidebar Widgets Column -->
+      </div>
+    </div>
+<div class="col-md-4 float-right ">
+<div class="card my-4">
+        <h5 class="card-header">Submit Your Solution</h5>
+    <div class="card-body">
+        <form method = 'POST' enctype="multipart/form-data">
+    {% csrf_token %}
+            <p1 style=" font-family : 'Times New Roman'; "> {{form.as_p}} </p1>
+    {% if user.is_authenticated %}
+        <button type = 'submit' class="btn btn-primary">Submit Code</button>
+    {% else %}
+    <p> <font color ='red'> Please <a href ="{% url 'login' %}?next={{request.path}}"> Sign in </a> for submit</font> </p>
+    {% endif %}
+    
+</form>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+{% endblock %}

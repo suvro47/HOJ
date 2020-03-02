@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Sort-Search</title>
+{% endblock %}
+{% block content %}
+
+<style>
+    .card {
+        box-shadow: 0 0px 0px #E3E7EB;
+    }
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 card mb-8  mt-4 left  top">
+      <h5 class="card-header"> <i> বাবল সর্ট (Bubble sort) </i></h5>
+      <div class="card-body">
+          <div>
+          <ul>
+              <li> <a href="http://binaryrongo.anindyaspaul.com/2013/08/17/bubble-sort/"> বাবল সর্ট - অনিন্দ্য পাল </a>  </li>
+              <li> <a href="https://hellohasan.com/2016/10/18/%E0%A6%AC%E0%A6%BE%E0%A6%AC%E0%A6%B2-%E0%A6%B8%E0%A6%B0%E0%A7%8D%E0%A6%9F-%E0%A6%85%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A6%97%E0%A6%B0%E0%A6%BF%E0%A6%A6%E0%A6%AE-bubble-sort-algorithm">  বাবল সর্ট - হাসান আবদুল্লাহ </a>  </li>
+              <li> <a href="https://shameem.me/bubble-sort-algorithm-bangla/"> বাবল সর্ট - শামীম রেজা </a> </li>
+              <li> <a href="https://www.youtube.com/watch?v=ZUI0VQ9JvDw&feature=youtu.be">বাবল সর্ট (ভিডিও) - তামিম শাহরিয়ার সুবীন</a> </li>
+          </ul>
+          </div>
+       </div>
+    </div>
+    <div class="col-md-10 card mb-8  mt-4 left  top">
+      <h5 class="card-header"> <i>  মার্জ সর্ট (Merge sort) </i></h5>
+      <div class="card-body">
+          <div>
+          <ul>
+              <li> <a href="shorturl.at/iovAI"> মার্জ সর্ট - হাসান আবদুল্লাহ </a> </li>
+              <li> <a href="https://www.youtube.com/watch?v=mWuk56Aa6xw&feature=youtu.be"> মার্জ সর্ট - ১ (ভিডিও) - তামিম শাহরিয়ার সুবীন  </a> </li>
+               <li> <a href="https://www.youtube.com/watch?v=-UzllqjFHW8&feature=youtu.be"> মার্জ সর্ট - 2 (ভিডিও) - তামিম শাহরিয়ার সুবীন </a> </li>
+              <li> <a href="https://www.youtube.com/watch?v=g63rwGXC720&feature=youtu.be"> মার্জ সর্ট - ৩ - স্পেস ও টাইম কমপ্লেক্সিটি (ভিডিও) - তামিম শাহরিয়ার সুবীন  </a> </li>
+          </ul>
+          </div>
+       </div>
+    </div>
+
+     <div class="col-md-10 card mb-8  mt-4 left  top">
+      <h5 class="card-header"> <i> কুইক সর্ট (Quick sort)  </i></h5>
+      <div class="card-body">
+          <div>
+          <ul>
+              <li> <a href="shorturl.at/dEQW2"> কুইক সর্ট - হাসান আবদুল্লাহ  </a> </li>
+              <li> <a href="https://www.youtube.com/watch?v=PmlfVdY_XjI&feature=youtu.be"> কুইক সর্ট ১ - অ্যালগরিদম (ভিডিও) - তামিম শাহরিয়ার সুবীন  </a> </li>
+          </ul>
+          </div>
+       </div>
+    </div>
+
+    <div class="col-md-10 card mb-8  mt-4 left  top">
+      <h5 class="card-header"> <i> কাউন্টিং সর্ট (Counting sort) </i></h5>
+      <div class="card-body">
+          <div>
+          <ul>
+              <li> <a href="http://binaryrongo.anindyaspaul.com/2013/12/06/counting-sort/"> কাউন্টিং সর্ট (COUNTING SORT) - অনিন্দ্য পাল  </a> </li>
+              <li> <a href="https://hellohasan.com/2016/09/25/%e0%a6%95%e0%a6%be%e0%a6%89%e0%a6%a8%e0%a7%8d%e0%a6%9f%e0%a6%bf%e0%a6%82-%e0%a6%b8%e0%a6%b0%e0%a7%8d%e0%a6%9f-counting-sort-algorithm"> কাউন্টিং সর্ট - হাসান আবদুল্লাহ </a> </li>
+          </ul>
+          </div>
+       </div>
+    </div>
+
+    <div class="col-md-10 card mb-8  mt-4 left  top">
+      <h5 class="card-header"> <i> হিপ সর্ট (Heap Sort) </i></h5>
+      <div class="card-body">
+          <div>
+          <ul>
+              <li> <a href="https://www.youtube.com/watch?v=m7x0GETKPaU&feature=youtu.be"> হিপ সর্ট - ১ (ভিডিও) - তামিম শাহরিয়ার সুবীন  </a> </li>
+              <li> <a href="https://www.youtube.com/watch?v=8Kwh0WgO_TU&feature=youtu.be"> হিপ - ২ - হিপ তৈরি করা (ভিডিও) - তামিম শাহরিয়ার সুবীন </a> </li>
+              <li> <a href="https://www.youtube.com/watch?v=FibnepuyOLY&feature=youtu.be"> হিপ - ৩ - হিপসর্ট (ভিডিও) - তামিম শাহরিয়ার সুবীন </a> </li>
+
+          </ul>
+          </div>
+       </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

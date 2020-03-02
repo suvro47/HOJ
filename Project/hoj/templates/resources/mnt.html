@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block title %}
+<title> Number Theory </title>
+{% endblock %}
+{% block content %}
+
+<style>
+    .card {
+        box-shadow: 0 0px 0px #E3E7EB;
+    }
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 card mb-8  mt-4 left  top">
+      <h5 class="card-header"> <i> প্রাইম নাম্বার (Prime Number) </i></h5>
+      <div class="card-body">
+          <div>
+          <ul>
+              <li> <a href="http://www.shafaetsplanet.com/planetcoding/?p=624">প্রাইম জেনারেটর (Sieve of Eratosthenes) </a> - <a href="https://bd.linkedin.com/in/shafaetcsedu"> শাফায়েত আশরাফ </a>  </li>
+              <li> <a href="http://shoshikkha.com/archives/2332"> প্রাইম জেনারেশন – সিভ অব ERATOSTHENES </a> - <a href="https://www.facebook.com/saadmaan.sakib"> সাদমান সাকিব </a>  </li>
+              <li> <a href="http://www.shafaetsplanet.com/planetcoding/?p=855">  বিটওয়াইজ সিভ  </a> - <a href="https://bd.linkedin.com/in/shafaetcsedu"> শাফায়েত আশরাফ </a> </li>
+              <li> <a href="https://returnzerooo.wordpress.com/2016/03/03/%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%87%E0%A6%AE-%E0%A6%B8%E0%A6%BF%E0%A6%AD-%E0%A6%AB%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%95%E0%A7%8D%E0%A6%9F%E0%A6%B0/">  প্রাইম জেনারেশন সিভ ও প্রাইম ফ্যাক্টরাইজেশন  </a> - <a href="https://www.facebook.com/sudip.sarker.9"> সুদীপ সরকার </a> </li>
+          </ul>
+          </div>
+       </div>
+    </div>
+    <div class="col-md-10 card mb-8  mt-4 left  top">
+      <h5 class="card-header"> <i> মডুলার অ্যারিথমেটিক (Modular Arithmetic)  </i></h5>
+      <div class="card-body">
+          <div>
+          <ul>
+              <li> <a href="http://www.shafaetsplanet.com/planetcoding/?p=936"> মডুলার অ্যারিথমেটিক  </a> - <a href="https://bd.linkedin.com/in/shafaetcsedu"> শাফায়েত আশরাফ </a> </li>
+              <li> <a href="https://mukitmkbs.wordpress.com/2014/10/01/modular-multiplicative-inverse/">  Modular Multiplicative Inverse </a>- <a href="https://www.facebook.com/hesitated.mkbs">  মুকিত চৌধুরী </a> </li>
+              <li> <a href="https://mukitmkbs.wordpress.com/2014/09/30/big-mod/">  Big Mod </a>- <a href="https://www.facebook.com/hesitated.mkbs">  মুকিত চৌধুরী </a> </li>
+          </ul>
+          </div>
+       </div>
+    </div>
+
+      <div class="col-md-10 card mb-8  mt-4 left  top">
+      <h5 class="card-header"> <i> কম্বিনেটরিক্স (Combinatorics)  </i></h5>
+      <div class="card-body">
+          <div>
+          <ul>
+              <li> <a href="http://www.shafaetsplanet.com/planetcoding/?p=600"> অ্যারেঞ্জমেন্ট এবং ডি-রেঞ্জমেন্ট গণনা  </a> - <a href="https://bd.linkedin.com/in/shafaetcsedu"> শাফায়েত আশরাফ </a> </li>
+              <li> <a href="http://shoshikkha.com/archives/4356">  ” ফাস্ট ” এক্সপনেনসিয়েশন! </a>- <a href="https://www.facebook.com/saadmaan.sakib">  সাদমান সাকিব </a> </li>
+          </ul>
+          </div>
+       </div>
+    </div>
+
+     <div class="col-md-10 card mb-8  mt-4 left  top">
+      <h5 class="card-header"> <i> ইউক্লিডিয়ান এলগোরিদম (Euclidean Algorithm)  </i></h5>
+      <div class="card-body">
+          <div>
+          <ul>
+              <li> <a href="http://subeen.com/%E0%A6%87%E0%A6%89%E0%A6%95%E0%A7%8D%E0%A6%B2%E0%A6%BF%E0%A6%A1%E0%A6%BF%E0%A7%9F%E0%A6%BE%E0%A6%A8-%E0%A6%85%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A6%97%E0%A6%B0%E0%A6%BF%E0%A6%A6%E0%A6%AE/"> ইউক্লিডিয়ান অ্যালগরিদম  </a> - <a href="https://www.facebook.com/nishat.rini"> তামান্না নিশাত রিনি </a> </li>
+              <li> <a href="https://returnzerooo.wordpress.com/2017/08/12/%E0%A6%8F%E0%A6%95%E0%A7%8D%E0%A6%B8%E0%A6%9F%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%A1%E0%A7%87%E0%A6%A1-%E0%A6%87%E0%A6%89%E0%A6%95%E0%A7%8D%E0%A6%B2%E0%A6%BF%E0%A6%A1%E0%A7%80%E0%A7%9F%E0%A6%BE%E0%A6%A8/">এক্সটেন্ডেড ইউক্লিডীয়ান অ্যালগোরিদম  </a>- <a href="https://www.facebook.com/sudip.sarker.9 "> সুদীপ সরকার </a> </li>
+          </ul>
+          </div>
+       </div>
+    </div>
+
+    <div class="col-md-10 card mb-8  mt-4 left  top">
+      <h5 class="card-header"> <i> প্রোবাবিলিটি (Probability) </i></h5>
+      <div class="card-body">
+          <div>
+          <ul>
+              <li> <a href="http://www.shafaetsplanet.com/planetcoding/?p=3060">প্রোবাবিলিটি: এক্সপেক্টেড ভ্যালু  </a> - <a href="https://bd.linkedin.com/in/shafaetcsedu"> শাফায়েত আশরাফ </a></li>
+              <li> <a href="http://shakilcompetitiveprogramming.blogspot.com/2015/08/probability-expected-value-part-1.html"> Probability & Expected value </a>-<a href="https://www.facebook.com/shakil.ahmed.980"> শাকিল আহমেদ </a> </li>
+
+          </ul>
+          </div>
+       </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

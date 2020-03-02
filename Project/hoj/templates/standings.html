@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Standings | Battle Of Brain</title>
+{% endblock %}
+{% block content %}
+<br>
+ <h4 align="center"> <i> See the Standings </i>  
+            <sup><sup><sup><sup><sup><sup><sup><sup><sup><sup><sup><sup><sup><sup>
+                       <h6 align="right">
+	               <form method='GET' action='' >
+	               <input type='text' name='q' placeholder="handle/institute/country"       value='{{ request.GET.q}}'/>
+	               <input type='submit' value='Search'/> </form>
+	               </h6> 
+            </sup></sup></sup></sup></sup></sup></sup></sup></sup></sup></sup></sup></sup></sup>
+        </h4>
+<table class="table table-sm table-striped table-bordered w-auto" align="center">
+  <thead>
+    <tr>
+      <td align="center"> <b> ID </b> </td>
+      <td align="center"> <b> User </b> </td>
+      <td align="center"> <b> Total Attempt </b> </td>
+      <td align="center"> <b> Total Solved </b> </td>
+      <td align="center"> <b> Institute </b> </td>
+      <td align="center"> <b> Country </b> </td>
+      <td align='center'> <b> Email </b> </td>
+    </tr>
+  </thead>
+    <tbody>
+    {% for user in all_user %}
+        <tr>
+          <td align='center'>  {{user.id}}  </th>
+          <td align = 'center'> <font color="blue"> {{user.username}} </font> </td>
+          <td align = 'center'> <font color="#191970"> {{user.problem_tried}} </font> </td>
+          <td align = 'center'> <font color="#191970"> {{user.problem_solved}} </font> </td>
+          <td align = 'center'> <font color="#191970"> {{user.institute}} </font> </td>
+          <td align = 'center'> <font color="#191970"> {{user.country}} </font> </td>
+          <td align = 'center'> <font color="#191970"> {{user.email}} </font> </td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
+
+
+
