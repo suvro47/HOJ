@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block title %}
+<title> Your Submission | {{sub.problem_id.title}} | Battle Of Brain</title>
+{% endblock %}
+{% block content %}
+
+<style>
+    body {
+        font-family : Times New Roman;
+    }
+    .CE {
+        color: #D2691E;
+    }
+
+    .AC {
+        color: green;
+    }
+    .RE {
+        color: #19ffff;
+    }
+    
+    .TLE {
+        color: blue;
+    } 
+
+    .WA {
+        color: red;
+     }
+    
+    .PE{
+       color: #556b2f;
+    }
+
+</style>
+
+<br>
+ <i> <h4 align="center"> Your Submission  </h4></i><hr>
+<table class="table table-sm table-striped table-bordered w-auto" align="center">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Submission Time</th>
+      <th scope="col">User</th>
+      <th scope="col">Problem Title</th>
+      <th scope="col">Language</th>
+      <th scope="col">Verdict</th>
+      <th scope="col">Time</th>
+      <th scope="col">Memory</th>
+    </tr>
+  </thead>
+    <tbody>
+       <tr>
+          <td algin = 'center'> <font color="black"> {{sub.id}} </font> </th>
+          <td align = 'center'> {{sub.timestamp}} </td>
+          <td align = 'center'> <font color="blue"> {{sub.user_id.username}} </font> </td>
+          <td align = 'center'><a href="/problem/{{sub.problem_id.id}}" style="text-decoration: none">{{sub.problem_id.title}}</a></td>
+          <td align = 'center'><font color="#191970"> {{sub.language}} </font> </td>
+          <td  align = 'center' >
+              {% if sub.get_verdict_display == "Accepted" %}
+                <div class="Verdict AC"> 
+              {% elif sub.get_verdict_display == "Wrong Answer" %}
+                <div class="Verdict WA"> 
+              {% elif sub.get_verdict_display == "Compilation Error" %}
+                <div class="Verdict CE"> 
+              {% elif sub.get_verdict_display == "Time Limit Exceeded" %}
+                <div class="Verdict TLE"> 
+              {% endif %}
+                     {{sub.get_verdict_display}}
+                 </div>
+            </td>
+
+          <td align = 'center'> {{sub.time}}s </td>
+          <td align = 'center'> {{sub.memory}} </td>
+
+        </tr>
+
+  </tbody>
+</table>
+{% endblock %}
+

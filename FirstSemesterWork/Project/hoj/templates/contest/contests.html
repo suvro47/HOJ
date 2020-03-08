@@ -1,0 +1,41 @@
+
+{% extends 'base.html' %}
+{% block title %}
+<title> Contests | Battle Of Brain</title>
+{% endblock %}
+{% block content %}
+
+<style>
+ body {
+        font-family : Times New Roman;
+    }
+</style>
+
+<br>
+	<h4 align="center"> <i> Contests are loading </i> </h4> <br>
+<table class="table table-sm table-striped table-bordered w-auto" align="center">
+  <thead>
+    <tr>
+      <td align = 'center'> <b> # </b> </td>
+      <td align = 'center'> <b> Contest Title </b> </td>
+      <td align = 'center'> <b> Contest Type </b> </td>
+      <td align = 'center'> <b> Start Time </b> </td>
+      <td align = 'center'> <b> End Time </b> </td>
+      <td align = 'center'> <b> Length </b> </td>
+    </tr>
+  </thead>
+    <tbody>
+    {% for contest in contests %}
+        <tr>
+          <td align= 'center'>  {{contest.id}}  </th>
+          <td align= 'center'>  <a href="{% url 'contest' contest.id %}" style="text-decoration: none"> {{contest.title}} </a> </td>
+          <td align = 'center'> <font color ='green'> {{contest.category}} </font> </td>
+          <td align = 'center'> <font color ='Red'> {{contest.start_time}} </font> </td>
+          <td align = 'center'> <font color ='Red'> {{contest.end_time}} </font> </td>
+          <td align = 'center'> <font color ='Blue'> 2:30 hours</font> </td>
+
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

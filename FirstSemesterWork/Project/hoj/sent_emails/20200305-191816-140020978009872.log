@@ -1,0 +1,23 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password Reset Confirmation
+From: webmaster@localhost
+To: admin@gmail.com
+Date: Thu, 05 Mar 2020 13:18:16 -0000
+Message-ID: <158341429615.10650.17265222029376317677@suvro>
+
+
+To initiate the password reset process for your admin TestSite Account,
+click the link below:
+
+http://127.0.0.1:8000/accounts/reset/MQ/5ej-dc86d5ec80c0a708b0c3/
+
+If clicking the link above doesn't work, please copy and paste the URL in a new browser
+window instead.
+
+Sincerely,
+The TestSite Team
+
+
+-------------------------------------------------------------------------------

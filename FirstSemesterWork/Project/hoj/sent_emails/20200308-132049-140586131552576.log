@@ -1,0 +1,23 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password Reset Confirmation
+From: webmaster@localhost
+To: suvro@gmail.com
+Date: Sun, 08 Mar 2020 07:20:49 -0000
+Message-ID: <158365204985.2004.11298189149355694179@suvro>
+
+
+To initiate the password reset process for your suvro47 TestSite Account,
+click the link below:
+
+http://127.0.0.1:8000/accounts/reset/Mw/5em-aebca76bc1011bb36955/
+
+If clicking the link above doesn't work, please copy and paste the URL in a new browser
+window instead.
+
+Sincerely,
+The TestSite Team
+
+
+-------------------------------------------------------------------------------

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Problems | Battle Of Brain</title>
+{% endblock %}
+{% block content %}
+
+<style>
+     body {
+        font-family : Times New Roman;
+    }
+   
+    .Beginner {
+       color: gray;
+    }
+
+    .Easy {
+        color: green;
+    }
+
+    .Medium {
+        color: Orange;
+    }
+
+    .Hard {
+        color: red;
+    }
+
+</style>
+
+<br>
+	<h4 align="center"> <i> Problems for Practice </i>  
+            <sup><sup><sup><sup><sup><sup><sup><sup><sup><sup><sup><sup><sup><sup>
+                       <h6 align="right">
+	               <form method='GET' action='' >
+	               <input type='text' name='q' placeholder="probelm tag / difficualty"       value='{{ request.GET.q}}'/>
+	               <input type='submit' value='Search'/> </form>
+	               </h6> 
+            </sup></sup></sup></sup></sup></sup></sup></sup></sup></sup></sup></sup></sup></sup>
+        </h4>
+<table class="table table-sm table-striped table-bordered w-auto" align="center">
+  <thead>
+    <tr>
+      <td align = 'center'> <b> # </b> </td>
+      <td align = 'center'> <b> Problem Title </b> </td>
+      <td align = 'center'> <b> Total Submission </b> </td>
+      <td align = 'center'> <b> Total Accepted </b> </td>
+      <td align = 'center'> <b> Tags </b> </td>
+      <td align = 'center'> <b> Difficulty </b> </td>
+    </tr>
+  </thead>
+    <tbody>
+    {% for problem in problems %}
+        <tr>
+          <td align= 'center'>  {{problem.id}}  </th>
+          <td align= 'center'>  <a href="/problem/{{problem.id}}" target="_blank" style="text-decoration: none" > {{problem.title}} </a> </td>
+          <td align = 'center'> <font color ='red'> {{problem.no_of_submissions}} </font> </td>
+          <td align = 'center'> <font color ='green'> {{problem.no_of_accepted}} </font> </td>
+          <td align = 'center'> <font color ='black'> {{problem.tags}} </font> </td>
+          <td  align = 'center' >
+              {% if problem.difficulty == "Beginner" %}
+                 <div class="Difficulty Beginner">
+              {% elif problem.difficulty == "Easy" %}
+                <div class="Difficulty Easy"> 
+              {% elif problem.difficulty == "Medium" %}
+                 <div class="Difficulty Medium">
+               {% elif problem.difficulty == "Hard" %}
+                 <div class="Difficulty Hard">
+              {% endif %}
+                     {{problem.difficulty}}
+                 </div>
+            </td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block title %}
+<title> {{contest.title}} | Battle Of Brain</title>
+{% endblock %}
+{% block content %}
+
+<style>
+    body {
+        font-family : Times New Roman;
+    }
+    .head_text {
+        color: white;
+        font-family : Times New Roman ;
+    }
+    
+    .card {
+        box-shadow: 0 0px 0px white;
+        height : 250px;
+        width : 400px;
+    }
+</style>
+
+
+<table class="table table-sm table-striped table-bordered w-auto">
+  <thead>
+    <tr>
+      <td > <font color="#f4f4f4">....</font> <a href="{% url 'contest' contest.id %}" style="text-decoration: none"> Dashboard </a> </td>
+      <td > <a href="#" style="text-decoration: none"> Submissions </a> </td>
+      <td > <a href="{% url 'contest_standings' contest.id %}" style="text-decoration: none"> Standings </a> </td>
+      <td > <a href="#" style="text-decoration: none" > Clarifications </a> </td>
+    </tr>
+  </thead>
+</table>
+
+<table align="center" >
+    <tr align="left">
+    
+    <td>
+    <p style=" font-size:20px;" align="center"> {{contest.title}} </p>
+    <table class="table table-sm table-striped table-bordered w-auto" align = "center">
+     <tr>
+      <td align="center"><b> Problem Name </b> </td>
+      <th> Total Attempt </th>
+      <th> Total Solved </th>
+    </tr>
+    <tr>
+      <td> A. <font color="#f4f4f4">_</font>  <a href="{% url 'cont_problem' contest.id prob1.id %}" style="text-decoration: none">  {{prob1.title}} <font color="#f4f4f4">_______________</font> </a> </td>
+      <td align="center"> 0 </td>
+      <td align="center"> 0 </td>
+    </tr>
+     <tr>
+      <td> B. <font color="#f4f4f4">_</font> <a href="{% url 'cont_problem' contest.id prob2.id %}" style="text-decoration: none">  {{prob2.title}} </a> </td>
+       <td align="center"> 0 </td>
+       <td align="center"> 0 </td>
+    </tr>
+    <tr>
+      <td> C. <font color="#f4f4f4">_</font> <a href="{% url 'cont_problem' contest.id prob3.id %}" style="text-decoration: none">  {{prob3.title}} </a> </td>
+      <td align="center"> 0 </td>
+      <td align="center"> 0 </td>
+    </tr>
+     <tr>
+      <td> D. <font color="#f4f4f4">_</font> <a href="{% url 'cont_problem' contest.id prob4.id %}" style="text-decoration: none">  {{prob4.title}} </a> </td>
+      <td align="center"> 0 </td>
+      <td align="center"> 0 </td>
+    </tr>
+
+    </table>
+  
+     </td>
+
+     <td bgcolor="#f4f4f4">
+
+     <div class="card my-4" bgcolor="#f4f4f4">
+      <h5 class="card-header" align="center"> <i> {{contest.title}}</i></h5>
+     <div class="card-body" bgcolor="#f4f4f4">
+      <p align="center" style="font-size:20px;"> <font color="red"> {{status}} </font> </p>
+      <p style="font-size:20px color:'red';" align="center"> <font color="blue"> Start : {{contest.start_time}} </font> </p>
+     <p style="font-size:20px color:'red';" align="center"> <font color="blue"> End : {{contest.end_time}} </font> </p>
+     </div>
+     </div> 
+     
+     </td>
+   
+   </tr>
+
+</table>  
+
+{% endblock %}
