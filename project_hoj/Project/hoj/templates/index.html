@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Index | Battle of Brain</title>
+{% endblock %}
+{% block content %}
+
+<style>
+ body {
+        font-family : Times New Roman;
+    }
+</style>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 card mb-20  mt-4 left  top">
+      <h5 class="card-header"> <i> <a href="{% url 'basic' %}" style="text-decoration: none"> ○ প্রোগ্রামিংয়ে হাতেখড়ি  </a></i> </h5>
+    </div>
+
+    <div class="col-md-10 card mb-8  mt-2 left  top">
+      <h5 class="card-header"> <i> <a href="{% url 'pro_lang' %}" style="text-decoration: none">  ○ প্রোগ্রামিং ল্যাংগুয়েজ </a> </i></h5>
+    </div>
+
+    <div class="col-md-10 card mb-8  mt-2 left  top">
+      <h5 class="card-header"> <i> <a href="{% url 'sort_search' %}" style="text-decoration: none">○ সর্টিং - সার্চিং </a> </i></h5>
+    </div>
+
+     <div class="col-md-10 card mb-8  mt-2 left  top">
+       <h5 class="card-header"> <a href="{% url 'ds' %}" style="text-decoration: none"> <i> ○ ডাটা স্ট্রাকচার </i></a> </h5></h5>
+    </div>
+
+    <div class="col-md-10 card mb-8  mt-2 left  top">
+      <h5 class="card-header"> <a href="{% url 'mnt' %}" style="text-decoration: none"> <i> ○ ম্যাথ ও নাম্বার থিওরী </i> </a> </h5>
+    </div>
+
+    <div class="col-md-10 card mb-8  mt-2 left  top">
+      <h5 class="card-header"> <a href="{% url 'graph_theory' %}" style="text-decoration: none"> <i>  ○ গ্রাফ থিওরী </i> </a> </h5>
+    </div>
+
+     <div class="col-md-10 card mb-8  mt-2 left  top">
+       <h5 class="card-header"> <a href="{% url 'recursion' %}" style="text-decoration: none"> <i> ○ রিকার্শন, ব্যাকট্র্যাকিং </i> </a> </h5>
+    </div>
+
+      <div class="col-md-10 card mb-8  mt-2 left  top">
+        <h5 class="card-header"> <a href="{% url 'DP' %}" style="text-decoration: none"> <i> ○ ডাইনামিক প্রোগ্রামিং </i> </a> </h5>
+    </div>
+
+  </div>
+<br>
+<br>
+</div>
+{% endblock %}

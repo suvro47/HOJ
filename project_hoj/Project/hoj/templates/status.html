@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% block title %}
+<title> Status | Battle Of Brain</title>
+{% endblock %}
+{% block content %}
+
+<style>
+    body {
+        font-family : Times New Roman;
+    }
+
+    .card {
+        box-shadow: 0 0px 0px #E3E7EB;
+        height : 0px;
+        width : 100px;
+    }
+
+    .CE {
+        color: #D2691E;
+    }
+
+    .AC {
+        color: green;
+    }
+    .RE {
+        color: #19ffff;
+    }
+    
+    .TLE {
+        color: blue;
+    } 
+
+    .WA {
+        color: red;
+     }
+    
+    .PE{
+       color: #556b2f;
+    }
+     
+       
+</style>
+
+
+<div class="col-md-2 float-right ">
+   <div class="card my-4">
+     <h6 class="card-header" align="center"> 
+      <form action="{% url 'status' %}">
+        <input type="submit" value= "All"/>
+     </form> 
+     <form action="{% url 'my_status' %}">
+        <input type='submit' value='My'/> 
+     </form> 
+     </h6>
+   </div>
+</div>
+     
+     
+<br>
+<br>
+
+<h4 align="center"> <i> <font color="#f4f4f4">___________________</font> User Submissions </i> </h4> <br>
+
+<table class="table table-sm table-striped table-bordered w-auto" align="center">
+
+  <thead>
+      
+    <tr>
+      <td align = 'center'>#</td>
+      <td align = 'center'> <b> Submission Time </b> </td>
+      <td align = 'center'> <b> User </b> </td>
+      <td align = 'center'> <b> Problem Title </b> </td>
+      <td align = 'center'> <b> Language </b> </td>
+      <td align = 'center'> <b> Verdict </b> </td>
+      <td align = 'center'> <b> Time </b> </td>
+      <td align = 'center'> <b> Memory </b> </td>
+
+    </tr>
+  </thead>
+    <tbody>
+    {% for sub in submission %}
+        <tr>
+          <td algin = 'center'> <font color="black"> {{sub.id}} </font> </th>
+          <td align = 'center'> {{sub.timestamp}} </td>
+          <td align = 'center'> <font color="blue"> {{sub.user_id.username}} </font> </td>
+          <td align = 'center'><a href="/problem/{{sub.problem_id.id}}" style="text-decoration: none">{{sub.problem_id.title}}</a></td>
+          <td align = 'center'><font color="#191970"> {{sub.language}} </font> </td>
+          <td  align = 'center' >
+              {% if sub.get_verdict_display == "Accepted" %}
+                <div class="Verdict AC"> 
+              {% elif sub.get_verdict_display == "Wrong Answer" %}
+                <div class="Verdict WA"> 
+              {% elif sub.get_verdict_display == "Compilation Error" %}
+                <div class="Verdict CE"> 
+              {% elif sub.get_verdict_display == "Time Limit Exceeded" %}
+                <div class="Verdict TLE"> 
+              {% endif %}
+                     {{sub.get_verdict_display}}
+                 </div>
+            </td>
+
+          <td align = 'center'> {{sub.time}}s </td>
+          <td align = 'center'> {{sub.memory}} </td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
+
