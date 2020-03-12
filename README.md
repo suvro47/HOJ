@@ -1,1 +1,1 @@
-# Battle OF Brain Online Judge 
+# Battle Of Brain Online Judge 
